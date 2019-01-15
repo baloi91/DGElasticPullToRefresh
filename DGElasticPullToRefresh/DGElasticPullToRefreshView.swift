@@ -383,11 +383,11 @@ open class DGElasticPullToRefreshView: UIView {
     
     fileprivate func layoutLoadingView() {
         let width = bounds.width
-        let height: CGFloat = bounds.height
+//        let height: CGFloat = bounds.height
         
         let loadingViewSize: CGFloat = DGElasticPullToRefreshConstants.LoadingViewSize
-        let minOriginY = (DGElasticPullToRefreshConstants.LoadingContentInset - loadingViewSize) / 2.0
-        let originY: CGFloat = max(min((height - loadingViewSize) / 2.0, minOriginY), 0.0)
+//        let minOriginY = 2//(DGElasticPullToRefreshConstants.LoadingContentInset - loadingViewSize) / 2.0
+        let originY: CGFloat = 2//CGFloat = max(min((height - loadingViewSize) / 2.0, minOriginY), 0.0)
         
         loadingView?.frame = CGRect(x: (width - loadingViewSize) / 2.0, y: originY, width: loadingViewSize, height: loadingViewSize)
         loadingView?.maskLayer.frame = convert(shapeLayer.frame, to: loadingView)
